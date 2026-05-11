@@ -1,9 +1,11 @@
 import { Link } from 'expo-router';
-import { ScrollView, View } from "react-native";
+import { ScrollView, View, useWindowDimensions } from "react-native";
 import Header from "../componets/header";
 import TrendingNews from "../componets/TrendingNews";
 import data from '../public/news.json';
 export default function Index() {
+  const { width, height } = useWindowDimensions();
+  const isPortrait = height >= width;
   return (
     <ScrollView>
       <View

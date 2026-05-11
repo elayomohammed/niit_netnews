@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Pressable, Text } from 'react-native';
 
 const menu_icon = require('../assets/images/menu_btn.png');
 const cnn_logo = require('../assets/images/cnn_logo.png');
@@ -7,13 +7,15 @@ const cnn_logo = require('../assets/images/cnn_logo.png');
 const Header = () => {
     return (
         <View style={styles.main}>
-            <div style={styles.logo_container}>
+            <View style={styles.logo_container}>
                 <Image source={menu_icon} style={styles.logos} />
                 <Image source={cnn_logo} style={styles.logos} />
-            </div>
-            <div>
-                <button>log in</button>
-            </div>
+            </View>
+            <View>
+                <Pressable>
+                    <Text>Log in</Text>
+                </Pressable>
+            </View>
         </View>
     )
 }

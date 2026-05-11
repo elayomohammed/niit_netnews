@@ -7,7 +7,7 @@ export default function FullHeighColumn() {
         <ScrollView>
             <View style={styles.container}>
                 <Text>
-                    <h1>Full heigh columns</h1>
+                    <Text>Full heigh columns</Text>
                 </Text>
                 <View style={styles.fullHeight}>
                     <Box num={1} flex={1} />

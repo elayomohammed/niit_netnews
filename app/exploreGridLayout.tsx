@@ -1,22 +1,26 @@
 import Box from "@/componets/Box";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 
 const ExploreGridLayout = () => {
+    const { width, height } = useWindowDimensions();
+    const isPortrait = height >= width;
     return (
-        <ScrollView style={{ flex: 1 }}>
-            <Text>Exploring Grid Layouts</Text>
-            <View style={styles.container}>
-                <Box num={1} height={100} width={100} />
-                <Box num={2} height={100} width={100} />
-                <Box num={3} height={100} width={100} />
-                <Box num={4} height={100} width={100} />
-                <Box num={5} height={100} width={100} />
-                <Box num={6} height={100} width={100} />
-                <Box num={7} height={100} width={100} />
-                <Box num={8} height={100} width={100} />
-                <Box num={9} height={100} width={100} />
-                <Box num={10} height={100} width={100} />
-            </View>
+        <ScrollView style={{ flex: 1, flexDirection: isPortrait ? 'column' : 'row' }}>
+            <Text style={{ textAlign: 'center' }}>Exploring Grid Layouts</Text>
+            <ScrollView horizontal={isPortrait ? false : true}>
+                <View style={styles.container}>
+                    <Box num={1} height={100} width={100} />
+                    <Box num={2} height={100} width={100} />
+                    <Box num={3} height={100} width={100} />
+                    <Box num={4} height={100} width={100} />
+                    <Box num={5} height={100} width={100} />
+                    <Box num={6} height={100} width={100} />
+                    <Box num={7} height={100} width={100} />
+                    <Box num={8} height={100} width={100} />
+                    <Box num={9} height={100} width={100} />
+                    <Box num={10} height={100} width={100} />
+                </View>
+            </ScrollView>
         </ScrollView>
     )
 }
@@ -24,7 +28,6 @@ const ExploreGridLayout = () => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'center',
         flexWrap: 'wrap',
         gap: 10,

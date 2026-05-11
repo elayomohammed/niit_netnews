@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 type Props = {
     num: number;
@@ -18,6 +18,8 @@ export default function Box({ num, height, width, flex }: Props) {
         }
     })
     return (
-        <View style={[styles.box, { height: height }, { width: width }]}>{num}</View>
+        <View style={[styles.box, { height: height }, { width: width }]}>
+            <Text>{num}</Text>
+        </View>
     )
 }
