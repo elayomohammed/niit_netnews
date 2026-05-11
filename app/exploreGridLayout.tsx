@@ -1,4 +1,5 @@
 import Box from "@/componets/Box";
+import { Link } from "expo-router";
 import { ScrollView, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 
 const ExploreGridLayout = () => {
@@ -21,6 +22,7 @@ const ExploreGridLayout = () => {
                     <Box num={10} height={100} width={100} />
                 </View>
             </ScrollView>
+            <Link href={'/columnsInsideRows'}>Goto columns inside rows</Link>
         </ScrollView>
     )
 }
