@@ -22,7 +22,7 @@ const ExploreGridLayout = () => {
                     <Box num={10} height={100} width={100} />
                 </View>
             </ScrollView>
-            <Link href={'/columnsInsideRows'}>Goto columns inside rows</Link>
+            <Link href={'/columnsInsideRows'} style={styles.link}>Goto columns inside rows</Link>
         </ScrollView>
     )
 }
@@ -35,6 +35,16 @@ const styles = StyleSheet.create({
         gap: 10,
         paddingHorizontal: 5,
         width: '100%',
+    },
+    link: {
+        flex: 1,
+        justifyContent: 'center',
+        alignSelf: 'center',
+        backgroundColor: 'green',
+        color: '#ffffff',
+        marginTop: 5,
+        padding: 5,
+        borderRadius: 5,
     }
 });
 

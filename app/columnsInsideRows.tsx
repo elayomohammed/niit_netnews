@@ -19,23 +19,23 @@ export default function ColumnsInsideRows() {
 
             <Row>
                 <Column>
+                    <Box num={5} height={100} width={100} />
                     <Box num={6} height={100} width={100} />
-                    <Box num={7} height={100} width={100} />
                 </Column>
                 <Column>
+                    <Box num={7} height={100} width={100} />
                     <Box num={8} height={100} width={100} />
-                    <Box num={9} height={100} width={100} />
                 </Column>
             </Row>
 
             <Row>
                 <Column>
+                    <Box num={9} height={100} width={100} />
                     <Box num={10} height={100} width={100} />
-                    <Box num={11} height={100} width={100} />
                 </Column>
                 <Column>
+                    <Box num={11} height={100} width={100} />
                     <Box num={12} height={100} width={100} />
-                    <Box num={13} height={100} width={100} />
                 </Column>
             </Row>
         </View>

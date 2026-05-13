@@ -8,6 +8,7 @@ export default function RootLayout() {
       <Stack.Screen name="fullHeightColumn" options={{ title: 'Full Height Columns' }} />
       <Stack.Screen name="exploreGridLayout" options={{ title: 'Grid Layout' }} />
       <Stack.Screen name="columnInsideRows" options={{ title: 'Columns inside rows' }} />
+      <Stack.Screen name="navigation_basics" options={{ title: 'navigation basics' }} />
     </Stack>
   )
 }
