@@ -2,7 +2,11 @@ import { Stack } from "expo-router";
 
 export default function RootLayout() {
   return (
-    <Stack>
+    <Stack screenOptions={{
+      headerStyle: { backgroundColor: 'green' },
+      headerTintColor: 'white',
+      headerTitleStyle: { fontSize: 24, fontWeight: 'bold' },
+    }}>
       <Stack.Screen name="index" options={{ title: 'Home' }} />
       <Stack.Screen name="explore_flexbox" options={{ title: 'Flexbox' }} />
       <Stack.Screen name="fullHeightColumn" options={{ title: 'Full Height Columns' }} />

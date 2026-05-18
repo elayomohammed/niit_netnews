@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { StyleSheet, View, Pressable, Text } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 const menu_icon = require('../assets/images/menu_btn.png');
 const cnn_logo = require('../assets/images/cnn_logo.png');
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: 10,
-        position: 'absolute',
+        position: 'relative',
         top: 0,
     },
     logo_container: {

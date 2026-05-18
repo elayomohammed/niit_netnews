@@ -3,6 +3,12 @@ import { ScrollView, StyleSheet, View, useWindowDimensions } from "react-native"
 import Header from "../componets/header";
 import TrendingNews from "../componets/TrendingNews";
 import data from '../public/news.json';
+
+export type UserProp = {
+  userName: string;
+  age: number;
+  courses_offered: string[];
+}
 export default function Index() {
 
   // router instance
@@ -18,6 +24,36 @@ export default function Index() {
         userInfo: 'super user information',
       }
     })
+  }
+
+  // handle view user profile
+  // [
+  //     {
+  //       userName: 'NIIT Student 1',
+  //       age: 29,
+  //       courses_offered: ['React Native', 'Mongo DB', 'Web Development'],
+  //     },
+  //     {
+  //       userName: 'NIIT Student 2',
+  //       age: 29,
+  //       courses_offered: ['React Native', 'Mongo DB', 'Web Development'],
+  //     }
+  //     {
+  //       userName: 'NIIT Student 3',
+  //       age: 29,
+  //       courses_offered: ['React Native', 'Mongo DB', 'Web Development'],
+  //     }
+  //   ]
+  function handleViewUserProfile() {
+    const profileInfo: UserProp = {
+      userName: 'NIIT Student',
+      age: 29,
+      courses_offered: ['React Native', 'Mongo DB', "Web Development"],
+    }
+    return router.push({
+      pathname: '/userProfile',
+      params: profileInfo,
+    });
   }
   const isPortrait = height >= width;
   return (
@@ -37,6 +73,7 @@ export default function Index() {
         <View>
           <Link href="/explore_flexbox" style={styles.link}>Goto Explore Flexbox</Link>
           <button onClick={routeData} style={styles.link}>Goto Navigation Basics</button>
+          <button onClick={handleViewUserProfile} style={styles.link}>View User Profile</button>
         </View>
       </View>
     </ScrollView>
